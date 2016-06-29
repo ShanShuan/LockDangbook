@@ -45,6 +45,10 @@
             android:name="com.shanshuan.book.activity.AddressActivity"
             android:label="@string/title_activity_address" >
         </activity>
+        <activity
+            android:name="com.shanshuan.book.activity.OrderActivity"
+            android:label="@string/title_activity_order" >
+        </activity>
     </application>
 
 </manifest>

@@ -9,5 +9,6 @@
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_signup">SignupActivity</string>
     <string name="title_activity_address">AddressActivity</string>
+    <string name="title_activity_order">OrderActivity</string>
 
 </resources>
