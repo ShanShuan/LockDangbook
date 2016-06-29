@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/wode_bg_header"
+        android:orientation="horizontal">
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="详情介绍"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_background"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/address_divider" >
+        <ImageView 
+            android:id="@+id/iv_mohu"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"/>
+
+        <ImageView
+            android:id="@+id/iv_book_info"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/tv_title"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/address_ico_del" />
+
+        <Button
+            android:id="@+id/btn_love"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/cart_btn_submit"
+            android:text="收藏" />
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_love"
+            android:layout_alignLeft="@+id/tv_title"
+            android:text="作者:王子丰" />
+
+        <TextView
+            android:id="@+id/tv_catogery"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_author"
+            android:layout_below="@+id/tv_author"
+            android:text="类别：武侠小说" />
+
+        <TextView
+            android:id="@+id/tv_publish_time"
+            android:layout_marginTop="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_catogery"
+            android:layout_below="@+id/tv_catogery"
+            android:text="出版时间：2016/6/22" />
+
+        <TextView
+            android:id="@+id/tv_publish_name"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_publish_time"
+            android:layout_below="@+id/tv_publish_time"
+            android:text="出版社:盖世英雄出版社" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btn_love"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/iv_book_info"
+            android:text="花千骨"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btn_love"
+            android:layout_toLeftOf="@+id/btn_love"
+            android:layout_marginRight="10dp"
+            android:textColor="#ff0000"
+            android:text="价格" />
+        
+    </RelativeLayout>
+
+	<TextView 
+	    android:layout_width="match_parent"
+	    android:layout_height="35dp"
+	    android:text="内容简介"
+	    android:textSize="16sp"
+	    android:gravity="center_vertical"
+	    android:background="#F8F6F2"/>
+	<ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1">
+	<TextView 
+	    android:id="@+id/tv_description"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="\n我杀数据库多空双方的时间飞快会加速卡得很疯狂好的撒分时度假恢复开机速度发动机刚回来看电视发货速度加快恢复河道上更加看好两大搅海翻江上了黑色的"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:textScaleX="1.23"
+	    android:lineSpacingExtra="5dp"
+	    android:textSize="12sp"
+	    />
+	</ScrollView>
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:layout_marginBottom="15dp">
+	    <Button
+	        android:id="@+id/ib_add_book"
+	        android:layout_width="160dp"
+	        android:layout_height="35dp"
+	        android:text="加入购物车"
+	        android:background="@drawable/cart_btn_submit"
+	        android:layout_centerInParent="true"/>
+	</RelativeLayout>
+</LinearLayout>

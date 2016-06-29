@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_main_bottom" />
+
+    <LinearLayout
+        android:id="@+id/ll_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/rg_main_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" 
+            android:background="@drawable/wode_bg_header">
+
+            <RadioButton
+                android:id="@+id/rb_chucheng"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:button="@null"
+                android:paddingTop="7dp"
+                android:drawableTop="@drawable/item_bottom_shucheng_button_drawtop"
+                android:gravity="center"
+                android:text="书城"
+                android:checked="true"
+                android:textColor="@drawable/item_bottom_text_color"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_shopcart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:paddingTop="7dp"
+                android:drawableTop="@drawable/item_bottom_shopcart_button_drawtop"
+                android:gravity="center"
+                android:text="购物车"
+                android:textColor="@drawable/item_bottom_text_color"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_mine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:paddingTop="7dp"
+                android:button="@null"
+                android:drawableTop="@drawable/item_bottom_mine_button_drawtop"
+                android:gravity="center"
+                android:text="我的"
+                android:textColor="@drawable/item_bottom_text_color"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

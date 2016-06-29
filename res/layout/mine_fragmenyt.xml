@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/wode_bg_header" >
+
+        <TextView
+            android:id="@+id/tv_mine_title"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:text="MY  BOOK"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <com.shanshuan.book.view.CircleImageView
+            android:id="@+id/iv_mine_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tv_mine_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/touxiang" />
+
+        <TextView
+            android:id="@+id/tv_mine_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_mine_photo"
+            android:layout_toRightOf="@+id/iv_mine_photo"
+            android:text="雯雯"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+
+            <ImageView
+                android:id="@+id/iv_mine_love"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:src="@drawable/mine_ico_shoucang" />
+
+            <TextView
+                android:id="@+id/tv_mine_love"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_toRightOf="@+id/iv_mine_love"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="我收藏的商品"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_mine_love"
+                android:layout_toRightOf="@+id/iv_mine_love"
+                android:background="#aaaaaa" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+
+            <ImageView
+                android:id="@+id/iv_mine_addrass"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:src="@drawable/mine_ico_address" />
+
+            <TextView
+                android:id="@+id/tv_mine_addrass"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_toRightOf="@+id/iv_mine_addrass"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="管理我的地址"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_mine_addrass"
+                android:layout_toRightOf="@+id/iv_mine_addrass"
+                android:background="#aaaaaa" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+
+            <ImageView
+                android:id="@+id/iv_mine_order"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:src="@drawable/mine_ico_order" />
+
+            <TextView
+                android:id="@+id/tv_mine_order"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_toRightOf="@+id/iv_mine_order"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="我的订单"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_mine_order"
+                android:layout_toRightOf="@+id/iv_mine_order"
+                android:background="#aaaaaa" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+
+            <ImageView
+                android:id="@+id/iv_mine_settings"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:src="@drawable/mine_ico_settings" />
+
+            <TextView
+                android:id="@+id/tv_mine_settings"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_toRightOf="@+id/iv_mine_settings"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="我的设置"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_mine_settings"
+                android:layout_toRightOf="@+id/iv_mine_settings"
+                android:background="#aaaaaa" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+
+            <ImageView
+                android:id="@+id/iv_mine_exit"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:src="@drawable/mine_ico_exit" />
+
+            <TextView
+                android:id="@+id/tv_mine_exit"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_toRightOf="@+id/iv_mine_exit"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="退出登录"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_mine_exit"
+                android:layout_toRightOf="@+id/iv_mine_exit"
+                android:background="#aaaaaa" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

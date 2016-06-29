@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+    <LinearLayout
+        android:id="@+id/ll_address_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/shouye_bar_top"
+        android:orientation="horizontal" >
+
+   
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我的地址管理"
+            android:layout_marginLeft="50dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+        <TextView 
+            android:id="@+id/tv_address_add"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="添加"
+            android:textColor="#ffffff"
+            android:layout_marginRight="10dp"
+            android:gravity="center"/>
+    </LinearLayout>
+    
+    <ListView 
+        android:layout_below="@+id/ll_address_top_bar"
+        android:id="@+id/lv_address_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/iv_book"
+        android:layout_width="128dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/touxiang" />
+    <TextView 
+        android:id="@+id/tv_book_name"
+        android:layout_below="@+id/iv_book"
+        android:text="书名"
+        android:layout_width="128dp"
+        android:gravity="center"
+        android:layout_height="18dp"/>
+
+</RelativeLayout>
