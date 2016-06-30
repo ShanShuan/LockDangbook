@@ -78,7 +78,7 @@ public final class R {
         public static final int xiangqing_button=0x7f02002f;
     }
     public static final class id {
-        public static final int action_settings=0x7f090070;
+        public static final int action_settings=0x7f090075;
         public static final int btnAddressSubmit=0x7f090053;
         public static final int btn_cart_icon_remove=0x7f090056;
         public static final int btn_cart_submit=0x7f09003e;
@@ -110,13 +110,14 @@ public final class R {
         public static final int iv_cart_min=0x7f09005a;
         public static final int iv_login_back=0x7f090010;
         public static final int iv_login_photo=0x7f090011;
-        public static final int iv_mine_addrass=0x7f090068;
-        public static final int iv_mine_exit=0x7f09006e;
-        public static final int iv_mine_love=0x7f090066;
-        public static final int iv_mine_order=0x7f09006a;
-        public static final int iv_mine_photo=0x7f090064;
-        public static final int iv_mine_settings=0x7f09006c;
+        public static final int iv_mine_addrass=0x7f09006d;
+        public static final int iv_mine_exit=0x7f090073;
+        public static final int iv_mine_love=0x7f09006b;
+        public static final int iv_mine_order=0x7f09006f;
+        public static final int iv_mine_photo=0x7f090069;
+        public static final int iv_mine_settings=0x7f090071;
         public static final int iv_mohu=0x7f090004;
+        public static final int iv_order_book=0x7f090063;
         public static final int iv_order_more_address=0x7f09001f;
         public static final int iv_signup_back=0x7f090023;
         public static final int iv_signup_code=0x7f090029;
@@ -176,15 +177,19 @@ public final class R {
         public static final int tv_edit=0x7f09003b;
         public static final int tv_login_modfy_password=0x7f090016;
         public static final int tv_login_sign_up=0x7f090015;
-        public static final int tv_mine_addrass=0x7f090069;
-        public static final int tv_mine_exit=0x7f09006f;
-        public static final int tv_mine_love=0x7f090067;
-        public static final int tv_mine_name=0x7f090065;
-        public static final int tv_mine_order=0x7f09006b;
-        public static final int tv_mine_settings=0x7f09006d;
-        public static final int tv_mine_title=0x7f090063;
+        public static final int tv_mine_addrass=0x7f09006e;
+        public static final int tv_mine_exit=0x7f090074;
+        public static final int tv_mine_love=0x7f09006c;
+        public static final int tv_mine_name=0x7f09006a;
+        public static final int tv_mine_order=0x7f090070;
+        public static final int tv_mine_settings=0x7f090072;
+        public static final int tv_mine_title=0x7f090068;
+        public static final int tv_order_count=0x7f090066;
         public static final int tv_order_default_address=0x7f09001e;
+        public static final int tv_order_price=0x7f090065;
+        public static final int tv_order_product_name=0x7f090064;
         public static final int tv_order_submit=0x7f090022;
+        public static final int tv_order_total_price=0x7f090067;
         public static final int tv_oreder_info=0x7f090021;
         public static final int tv_price=0x7f09000d;
         public static final int tv_publish_name=0x7f09000c;
@@ -205,7 +210,8 @@ public final class R {
         public static final int item_book=0x7f030009;
         public static final int item_cart=0x7f03000a;
         public static final int item_lv_address=0x7f03000b;
-        public static final int mine_fragmenyt=0x7f03000c;
+        public static final int item_lv_order=0x7f03000c;
+        public static final int mine_fragmenyt=0x7f03000d;
     }
     public static final class menu {
         public static final int address=0x7f080000;

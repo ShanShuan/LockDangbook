@@ -50,16 +50,13 @@ public class OrderAdapter extends BaseAdapter{
 		ViewHodler hodler=null;
 		CartItem item=items.get(position);
 		if(convertView==null){
-			convertView=View.inflate(context, R.layout.item_cart, null);
+			convertView=View.inflate(context, R.layout.item_lv_order, null);
 			hodler=new ViewHodler();
-			hodler.btnRemove=(Button) convertView.findViewById(R.id.btn_cart_icon_remove);
-			hodler.ivAdd=(ImageView) convertView.findViewById(R.id.iv_cart_add);
-			hodler.ivBook=(ImageView) convertView.findViewById(R.id.iv_cart_book);
-			hodler.ivMin=(ImageView) convertView.findViewById(R.id.iv_cart_min);
-			hodler.tvProductName=(TextView) convertView.findViewById(R.id.tv_cart_product_name);
-			hodler.tvPrice=(TextView) convertView.findViewById(R.id.tv_cart_price);
-			hodler.tvCount=(TextView) convertView.findViewById(R.id.tv_cart_count);
-			hodler.tvCounts=(TextView) convertView.findViewById(R.id.tv_cart_counts);
+			hodler.ivBook=(ImageView) convertView.findViewById(R.id.iv_order_book);
+			hodler.tvProductName=(TextView) convertView.findViewById(R.id.tv_order_product_name);
+			hodler.tvPrice=(TextView) convertView.findViewById(R.id.tv_order_price);
+			hodler.tvCount=(TextView) convertView.findViewById(R.id.tv_order_count);
+			hodler.tvTotalPrice=(TextView) convertView.findViewById(R.id.tv_order_total_price);
 			convertView.setTag(hodler);
 		}else{
 			hodler=(ViewHodler) convertView.getTag();
@@ -67,27 +64,18 @@ public class OrderAdapter extends BaseAdapter{
 		hodler.tvProductName.setText(item.getBook().getProductName());
 		hodler.tvPrice.setText(item.getBook().getDangPrice()+"£§");
 		hodler.tvCount.setText("x"+(item.getBookCount()));
-		hodler.tvCounts.setText((item.getBookCount())+"");
+		hodler.tvTotalPrice.setText("£§"+(item.getBookCount())*(item.getBook().getDangPrice()));
 		//œ‘ æÕº∆¨
 		String path=GlobalConsts.BASEURL+ "productImages/"+item.getBook().getProduct_pic();
 		x.image().bind(hodler.ivBook, path);
-		hodler.btnRemove.setTag("btnRemove"+position);
-		hodler.tvPrice.setTag("tvPrice"+position);
-		hodler.tvCount.setTag("tvCount"+position);
-		hodler.tvCounts.setTag("tvCounts"+position);
-		hodler.tvPrice.setTag("tvPrice"+position);
-		
 		return convertView;
 	}
 	class ViewHodler{
-		private Button btnRemove;
+		private TextView tvTotalPrice;
 		private ImageView ivBook;
 		private TextView tvProductName;
 		private TextView tvPrice;
 		private TextView tvCount;
-		private ImageView ivMin;
-		private ImageView ivAdd;
-		private TextView tvCounts;
 	}
 
 	

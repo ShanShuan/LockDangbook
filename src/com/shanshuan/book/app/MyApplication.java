@@ -63,4 +63,7 @@ public class MyApplication extends Application {
 		queue=Volley.newRequestQueue(this);
 		cart=Cart.readCart();
 	}
+	public void clearItems() {
+		cart.removeAll();
+	}
 }

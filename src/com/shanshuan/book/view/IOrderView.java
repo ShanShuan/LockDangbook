@@ -9,4 +9,6 @@ import com.shanshuan.book.entity.Address;
 public interface IOrderView {
 	public void setDefalutAddress(Address add);
 	public void setDefalutAddressFail(String error);
+	public void submitOrderSecesse();
+	public void submitOrderFail(String error);
 }

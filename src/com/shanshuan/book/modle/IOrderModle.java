@@ -1,5 +1,6 @@
 package com.shanshuan.book.modle;
 
+import com.shanshuan.book.entity.Address;
 import com.shanshuan.book.modle.IModle.CommonCallBack;
 
 /**
@@ -7,4 +8,5 @@ import com.shanshuan.book.modle.IModle.CommonCallBack;
  */
 public interface IOrderModle {
 	public void loadDefaultAddress(CommonCallBack callBack);
+	public void submitOrder(Address add,CommonCallBack callBack);
 }

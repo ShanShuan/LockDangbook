@@ -1,6 +1,5 @@
 package com.shanshuan.book.fragment;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.xutils.x;
@@ -16,6 +15,8 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -53,18 +54,53 @@ public class ShopCartFragment extends Fragment implements ICartView{
 		x.view().inject(this,view);
 		cartPresenter=new CartPresenterImp(this);
 		setListenners();
-//		//设置listview 动画
-//		Animation animation=AnimationUtils.loadAnimation(getActivity(), R.anim.item_animation);
-//		
-//		LayoutAnimationController c=new LayoutAnimationController(animation);
-//		c.setDelay(300);
-//		c.setOrder(LayoutAnimationController.ORDER_NORMAL);
-//		lvCart.setLayoutAnimation(c);
+	
 		return view;
 	}
 	
 	
 	private void setListenners() {
+		
+		
+		lvCart.setOnScrollListener(new OnScrollListener() {
+			boolean isOnBottom;
+			@Override
+			public void onScrollStateChanged(AbsListView view, int scrollState) {
+				switch (scrollState) {
+				case SCROLL_STATE_FLING:
+					
+					break;
+				case SCROLL_STATE_IDLE:
+					if(isOnBottom){
+						//设置listview 动画
+						Animation animation=AnimationUtils.loadAnimation(getActivity(), R.anim.item_animation);
+						
+						LayoutAnimationController c=new LayoutAnimationController(animation);
+						c.setDelay(0.5f);
+						c.setOrder(LayoutAnimationController.ORDER_NORMAL);
+						lvCart.setLayoutAnimation(c);
+					}
+					break;
+				case SCROLL_STATE_TOUCH_SCROLL:
+					
+					break;
+
+				}
+				
+			}
+			
+			@Override
+			public void onScroll(AbsListView view, int firstVisibleItem,
+					int visibleItemCount, int totalItemCount) {
+				if((firstVisibleItem+visibleItemCount)==totalItemCount){
+					isOnBottom=true;
+				}else{
+					isOnBottom=false;
+				}
+				
+			}
+		});
+		
 		tvEdit.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -90,12 +126,14 @@ public class ShopCartFragment extends Fragment implements ICartView{
 	}
 
 
-	//onresume 时显示添加的购物信息
+	//onresume 时显示添加的购物信息 和提高订单后的价格跟新
+	
 	@Override
 	public void onResume() {
 		cart=MyApplication.getContext().getCart();
 		items=cart.getItems();
 		setAdapter(items);
+		tvPrice.setText(cart.getSumPrice()+"￥");
 		super.onResume();
 	}
 	

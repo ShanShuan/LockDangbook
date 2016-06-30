@@ -15,4 +15,5 @@ public class GlobalConsts {
 	public static final String URL_LOAD_USER_ADDRESS = BASEURL+"order/chooseAdd.action";
 	public static final String URL_SET_ADDRESS_DEFAULT = BASEURL + "order/setAddDefault.action";
 	public static final String URL_LOAD_DEFAULT_ADDRESS = BASEURL + "order/getDefaultAddress.action" ;
+	public static final String URL_SUBMIT_ORDER = BASEURL + "order/saveOrder.action";
 }

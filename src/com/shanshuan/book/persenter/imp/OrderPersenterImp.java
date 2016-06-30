@@ -18,7 +18,9 @@ public class OrderPersenterImp implements IOrderPersenter{
 		this.view=view;
 		modle=new OrderModleImp();
 	}
-
+	/**
+	 * 获得默认地址
+	 */
 	@Override
 	public void getDefaultAddress() {
 		modle.loadDefaultAddress(new CommonCallBack() {
@@ -32,6 +34,27 @@ public class OrderPersenterImp implements IOrderPersenter{
 			@Override
 			public void onFialed(Object error) {
 				 view.setDefalutAddressFail((String)error);
+			}
+		});
+	}
+	
+	/**
+	 * 提交订单
+	 */
+	@Override
+	public void submitOrder(Address add) {
+		modle.submitOrder(add,new CommonCallBack() {
+			
+			@Override
+			public void onSeccesse(Object obj) {
+				view.submitOrderSecesse();
+				
+			}
+			
+			@Override
+			public void onFialed(Object error) {
+				view.submitOrderFail((String)error);
+				
 			}
 		});
 	}

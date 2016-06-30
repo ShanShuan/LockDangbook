@@ -117,4 +117,17 @@ public class Cart implements Serializable{
 		return "Cart [items=" + items + "]";
 	}
 	
+	public String cartToString(){
+		StringBuffer sb=new StringBuffer();
+		for (int i = 0; i < items.size(); i++) {
+			CartItem item = items.get(i);
+			sb.append(item.getBook().getId()+","+item.getBookCount()+";");
+		}
+		sb.deleteCharAt(sb.length()-1);
+		return sb.toString();
+	}
+	public void removeAll() {
+			items.clear();
+			saveCart();
+	}
 }
